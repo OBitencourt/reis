@@ -5,9 +5,16 @@
   --foreground: #171717;
 }
 
-@theme inline {
+@theme {
+  /* Cores do sistema */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  
+  /* Cores personalizadas */
+  --color-primary: hsl(357, 100%, 55%);
+  --color-secondary: hsl(153, 97%, 26%);
+  
+  /* Fontes */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
