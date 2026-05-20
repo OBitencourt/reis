@@ -43,7 +43,7 @@ export default function Header() {
               <Image 
                 width={300}
                 height={300}
-                src="/Logo-Branca-Detalhes-Verdes-E-Vermelho-Reis.png"
+                src={scrolled ? "/Logo-Branca-Reis.png" : "/Logo-Branca-Detalhes-Verdes-E-Vermelho-Reis.png"}
                 alt='logo-black'
                 className='h-auto w-40'
               />
@@ -76,7 +76,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center gap-4">
             <a
               href="#contact"
-              className="border text-white border-white/10 hover:border-zinc-400 transition-all duration-300 rounded-full px-5 py-3 text-xs uppercase tracking-[0.18em]"
+              className="border text-white hover:bg-zinc-100/10 border-white/10 hover:border-zinc-400 transition-all duration-300 rounded-full px-5 py-3 text-xs uppercase tracking-[0.18em]"
             >
               Contact us
             </a>
