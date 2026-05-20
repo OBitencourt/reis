@@ -25,10 +25,10 @@ export default function Header() {
       initial={{ opacity: 0, y: -80 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className={`fixed top-0 left-0 z-50 w-full transition-all duration-500 ${
+      className={`fixed top-0 left-0 z-50  transition-all duration-500 ${
         scrolled
-          ? 'bg-[#0c0a07]/30 backdrop-blur-xl'
-          : 'bg-transparent'
+          ? 'bg-[#0c0a07]/60 backdrop-blur-xl w-[90%] left-[5%] top-5 rounded-3xl'
+          : 'bg-transparent w-full'
       }`}
     >
       <div className="max-w-400 mx-auto px-6">
@@ -63,7 +63,7 @@ export default function Header() {
               <a
                 key={label}
                 href={href}
-                className="group relative text-xs uppercase tracking-[0.18em] font-extralight text-zinc-400 hover:text-zinc-200 transition-all"
+                className={`group relative text-xs uppercase tracking-[0.18em] font-extralight text-zinc-300  hover:text-zinc-100 transition-all`}
               >
                 {label}
 
