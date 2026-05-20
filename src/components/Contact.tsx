@@ -52,7 +52,7 @@ export default function Contact({ id }: ContactProps) {
   };
 
   return (
-    <section id={id || "contact"} className="py-20 bg-white">
+    <section id={id || "contact"} className="py-20 border-t border-zinc-200 w-full bg-white">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
