@@ -1,3 +1,4 @@
+import About from "@/src/components/AboutUs";
 import Contact from "@/src/components/Contact";
 import Footer from "@/src/components/Footer";
 import Header from "@/src/components/Header";
@@ -12,6 +13,7 @@ export default function Home() {
       <HeroSection />
       <TrustBar />
       <Services />
+      <About />
       <Contact />
       <Footer />
     </div>

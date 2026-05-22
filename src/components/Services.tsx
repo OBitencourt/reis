@@ -147,14 +147,14 @@ export default function Services({ id }: ServicesProps) {
           initial="hidden"
           animate="visible"
           exit="exit"
-          className="grid md:grid-cols-2 gap-8 md:gap-12 items-start px-5"
+          className="grid md:grid-cols-2 gap-8 md:gap-12 border-t border-b border-zinc-200 items-center px-5"
         >
           {/* Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
-            className="overflow-hidden border border-zinc-200 p-2 h-96 md:h-full"
+            className="overflow-hidden border-r border-l border-zinc-200 p-2 h-96 md:h-full"
           >
             <img
               src={activeService.image}
@@ -168,7 +168,7 @@ export default function Services({ id }: ServicesProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-col justify-start"
+            className="flex flex-col justify-center"
           >
             <h3 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               {activeService.name}
@@ -190,15 +190,6 @@ export default function Services({ id }: ServicesProps) {
             <p className="text-lg w-2/3 text-foreground/80 leading-relaxed mb-8">
               {activeService.description}
             </p>
-
-            {/* CTA Button */}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-              className="self-start px-8 py-3 bg-accent hover:bg-accent/90 text-white rounded-lg font-semibold transition-colors duration-300"
-            >
-              Solicitar Orçamento
-            </motion.button>
           </motion.div>
         </motion.div>
       </div>

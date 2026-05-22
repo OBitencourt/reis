@@ -1,0 +1,183 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { ArrowRight, BadgeCheck } from "lucide-react";
+
+interface AboutProps {
+  id?: string;
+}
+
+export default function About({ id }: AboutProps) {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 },
+    },
+  };
+
+  const stats = [
+    { label: "Projetos Concluídos", value: "100+" },
+    { label: "Anos de Experiência", value: "15+" },
+    { label: "Clientes Satisfeitos", value: "500+" },
+    { label: "Taxa de Satisfação", value: "98%" },
+  ];
+
+  return (
+    <section
+      id={id || "about"}
+      className="p-20 border-t border-zinc-200 w-full"
+    >
+      <div className="container">
+        {/* Header Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="flex flex-col md:flex-row md:items-end md:justify-between mb-12"
+        >
+          <motion.a
+            href="#contact"
+            whileHover={{ scale: 1.05 }}
+            className="mt-6 md:mt-0 md:ml-0 flex items-center gap-2 text-secondary border-b border-transparent hover:border-secondary font-semibold hover:text-accent transition-colors duration-300 whitespace-nowrap"
+          >
+            Contact us
+            <ArrowRight className="w-5 h-5" />
+          </motion.a>
+          <div className="flex-1">
+            <p className="text-sm text-end font-light text-secondary mb-2 uppercase tracking-wide">
+              Sobre Nós
+            </p>
+            <h2 className="text-4xl text-end md:text-5xl font-bold text-foreground">
+              Construindo Sonhos, Reformando Vidas.
+            </h2>
+          </div>
+        </motion.div>
+
+        {/* Content Grid */}
+        <div className="grid md:grid-cols-2  items-start">
+          {/* Left Column - Text Content */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="space-y-6 p-12 border-t border-b border-l border-zinc-200 h-163"
+          >
+            <motion.div variants={itemVariants}>
+              <h3 className="text-2xl font-bold text-foreground mb-4">
+                Quem Somos
+              </h3>
+              <p className="text-lg text-foreground/80 leading-relaxed">
+                A Rei's é uma empresa familiar com mais de 15 anos de
+                experiência em construção e reforma. Nascida da paixão de um pai
+                e filho pela excelência, transformamos projetos em realidades
+                com qualidade, dedicação e atenção aos detalhes.
+              </p>
+            </motion.div>
+
+            <motion.div variants={itemVariants}>
+              <h3 className="text-2xl font-bold text-foreground mb-4">
+                Nossa Missão
+              </h3>
+              <p className="text-lg text-foreground/80 leading-relaxed">
+                Oferecer soluções completas de construção e reforma que superem
+                as expectativas dos nossos clientes, combinando técnica,
+                criatividade e um atendimento personalizado em cada projeto.
+              </p>
+            </motion.div>
+
+            <motion.div variants={itemVariants}>
+              <h3 className="text-2xl font-bold text-foreground mb-4">
+                Por Que Nos Escolher
+              </h3>
+              <ul className="space-y-3">
+                {[
+                  "Equipe experiente e qualificada",
+                  "Materiais de alta qualidade",
+                  "Prazos respeitados",
+                  "Atendimento personalizado",
+                  "Garantia em todos os serviços",
+                ].map((item, index) => (
+                  <motion.li
+                    key={index}
+                    variants={itemVariants}
+                    className="flex items-center gap-3 text-lg text-foreground/80"
+                  >
+                    <BadgeCheck className="w-4 h-4" />
+                    <span>{item}</span>
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
+          </motion.div>
+
+          {/* Right Column - Stats */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="space-y-6 border border-zinc-200"
+          >
+            {/* Image Placeholder */}
+            <motion.div
+              variants={itemVariants}
+              className="relative w-full h-96  overflow-hidden border-b border-zinc-200"
+            >
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-24 h-24rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-5xl">(foto)</span>
+                  </div>
+                  <p className="text-foreground/60 font-semibold">
+                    Pai e Filho
+                  </p>
+                  <p className="text-foreground/40 text-sm">
+                    Dedicados à Excelência
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Stats Grid */}
+            <div className="grid grid-cols-2 gap-4">
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  variants={itemVariants}
+                  className={`p-6 duration-300 hover:bg-zinc-100 transition border-t border-zinc-200 ${
+                    (index == 0 && "border-b border-r") ||
+                    (index == 1 && "border-b border-l") ||
+                    (index == 2 && "border-r") ||
+                    (index == 3 && "border-l")
+                  }`}
+                >
+                  <div className="text-3xl font-bold text-zinc-700 mb-2">
+                    {stat.value}
+                  </div>
+                  <p className="text-sm text-zinc-700/80 font-medium">
+                    {stat.label}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
