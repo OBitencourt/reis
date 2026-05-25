@@ -53,11 +53,11 @@ const HeroSection = () => {
             </span>
           </h1>
 
-          <p className="mt-8 text-md text-zinc-300 font-light ml-10 leading-relaxed max-w-2xl text-center">
+          <p className="mt-8 text-md text-zinc-300 font-light md:ml-10 leading-relaxed max-w-2xl text-center">
             Specialists in residential and commercial renovations, delivering
             quality in every detail.
           </p>
-          <div className="mt-10 flex flex-wrap gap-4 justify-center -ml-15">
+          <div className="mt-10 flex flex-wrap gap-4 justify-center md:-ml-15">
             <a
               href="#contact"
               className="group bg-zinc-100 hover:bg-zinc-200 hover:shadow-sm hover:shadow-white/50 transition-all duration-300 rounded-full pl-7 pr-4 py-4 text-sm uppercase tracking-[0.18em] text-black flex items-center gap-3 hover:scale-105"

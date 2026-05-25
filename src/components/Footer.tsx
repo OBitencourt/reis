@@ -28,16 +28,16 @@ export default function Footer() {
 
   return (
     <footer className="bg-zinc-800 w-[97%] mb-4 rounded-lg text-white py-12 flex justify-center">
-      <div className="container flex flex-col items-center">
+      <div className="container flex flex-col items-center text-center md:text-start">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-4 gap-8 mb-8 jus"
+          className="grid md:grid-cols-4 gap-8 mb-8 "
         >
           {/* Brand */}
-          <motion.div variants={itemVariants} className="flex flex-col gap-6 pl-12">
+          <motion.div variants={itemVariants} className="flex flex-col gap-6 md:pl-12">
             <Image
               width={300}
               height={300}
@@ -103,7 +103,7 @@ export default function Footer() {
           {/* Social */}
           <motion.div variants={itemVariants}>
             <h4 className="font-semibold mb-4">Redes Sociais</h4>
-            <div className="flex gap-4">
+            <div className="flex gap-4 justify-center">
               <a
                 href="#"
                 className="w-10 h-10 bg-white/20 rounded-lg hover:bg-white/30 flex items-center justify-center hover:bg-accent transition"

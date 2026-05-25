@@ -117,7 +117,7 @@ export default function Services({ id }: ServicesProps) {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-12 flex flex-wrap gap-1 border-t border-b border-zinc-200"
+          className="mb-12 flex flex-wrap md:gap-1 border-t border-b border-zinc-200"
         >
           {services.map((service, index) => (
             <motion.button
@@ -132,7 +132,7 @@ export default function Services({ id }: ServicesProps) {
               className={`px-6 py-3  transition-all cursor-pointer duration-300 ${
                 activeService.id === service.id
                   ? "bg-zinc-700 text-white font-medium"
-                  : "bg-transparent text-zinc-500 border-r border-l border-zinc-200 hover:bg-zinc-200 hover:text-zinc-900"
+                  : "bg-transparent text-zinc-500 border-r border-l border-t border-b border-zinc-200 hover:bg-zinc-200 hover:text-zinc-900"
               }`}
             >
               {service.name}
@@ -154,7 +154,7 @@ export default function Services({ id }: ServicesProps) {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
-            className="overflow-hidden border-r border-l border-zinc-200 p-2 h-96 md:h-full"
+            className="overflow-hidden border-r border-l border-b md:border-b-none border-zinc-200 p-2 h-96 md:h-full"
           >
             <img
               src={activeService.image}
@@ -170,24 +170,26 @@ export default function Services({ id }: ServicesProps) {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex flex-col justify-center"
           >
-            <h3 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              {activeService.name}
-            </h3>
+            <div className="flex items-center justify-between md:block ">
+              <h3 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                {activeService.name}
+              </h3>
 
-            {/* Duration Badge */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4, delay: 0.3 }}
-              className="inline-block mb-6 px-4 w-30 py-2 bg-muted rounded-full bg-zinc-200"
-            >
-              <span className="text-sm flex gap-2 items-center font-semibold text-foreground">
-                <Clock className="w-3 h-3" /> {activeService.duration}
-              </span>
-            </motion.div>
+              {/* Duration Badge */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4, delay: 0.3 }}
+                className="inline-block self-end mb-6 px-4 w-30 py-2 bg-muted rounded-full bg-zinc-200"
+              >
+                <span className="text-sm flex gap-2 items-center font-semibold text-foreground">
+                  <Clock className="w-3 h-3" /> {activeService.duration}
+                </span>
+              </motion.div>
+            </div>
 
             {/* Description */}
-            <p className="text-lg w-2/3 text-foreground/80 leading-relaxed mb-8">
+            <p className="text-lg md:w-2/3 text-foreground/80 leading-relaxed mb-8">
               {activeService.description}
             </p>
           </motion.div>

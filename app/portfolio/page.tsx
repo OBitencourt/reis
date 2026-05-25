@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -15,60 +15,183 @@ interface Service {
 }
 
 const services: Service[] = [
-  { id: "fences", name: "Cercas" },
-  { id: "decks", name: "Deques" },
+  { id: "fences", name: "Fences" },
+  { id: "decks", name: "Decks" },
   { id: "drywall", name: "Drywall" },
-  { id: "landscaping", name: "Paisagismo" },
-  { id: "roof", name: "Telhados" },
+  { id: "landscaping", name: "Landscaping" },
+  { id: "roof", name: "Roofs" },
+  { id: "interlock", name: "Interlock" },
+  { id: "railings", name: "Railings" },
+  { id: "gates", name: "Gates" },
 ];
 
 const portfolioItems: PortfolioItem[] = [
   // Cercas
-  { id: "1", serviceId: "fences", image: "https://via.placeholder.com/400x300?text=Cerca+1" },
-  { id: "2", serviceId: "fences", image: "https://via.placeholder.com/400x300?text=Cerca+2" },
-  { id: "3", serviceId: "fences", image: "https://via.placeholder.com/400x300?text=Cerca+3" },
-  { id: "4", serviceId: "fences", image: "https://via.placeholder.com/400x300?text=Cerca+4" },
-  { id: "5", serviceId: "fences", image: "https://via.placeholder.com/400x300?text=Cerca+5" },
-  { id: "6", serviceId: "fences", image: "https://via.placeholder.com/400x300?text=Cerca+6" },
+  {
+    id: "1",
+    serviceId: "fences",
+    image: "https://via.placeholder.com/400x300?text=Cerca+1",
+  },
+  {
+    id: "2",
+    serviceId: "fences",
+    image: "https://via.placeholder.com/400x300?text=Cerca+2",
+  },
+  {
+    id: "3",
+    serviceId: "fences",
+    image: "https://via.placeholder.com/400x300?text=Cerca+3",
+  },
+  {
+    id: "4",
+    serviceId: "fences",
+    image: "https://via.placeholder.com/400x300?text=Cerca+4",
+  },
+  {
+    id: "5",
+    serviceId: "fences",
+    image: "https://via.placeholder.com/400x300?text=Cerca+5",
+  },
+  {
+    id: "6",
+    serviceId: "fences",
+    image: "https://via.placeholder.com/400x300?text=Cerca+6",
+  },
 
   // Deques
-  { id: "7", serviceId: "decks", image: "https://via.placeholder.com/400x300?text=Deque+1" },
-  { id: "8", serviceId: "decks", image: "https://via.placeholder.com/400x300?text=Deque+2" },
-  { id: "9", serviceId: "decks", image: "https://via.placeholder.com/400x300?text=Deque+3" },
-  { id: "10", serviceId: "decks", image: "https://via.placeholder.com/400x300?text=Deque+4" },
-  { id: "11", serviceId: "decks", image: "https://via.placeholder.com/400x300?text=Deque+5" },
-  { id: "12", serviceId: "decks", image: "https://via.placeholder.com/400x300?text=Deque+6" },
+  {
+    id: "7",
+    serviceId: "decks",
+    image: "https://via.placeholder.com/400x300?text=Deque+1",
+  },
+  {
+    id: "8",
+    serviceId: "decks",
+    image: "https://via.placeholder.com/400x300?text=Deque+2",
+  },
+  {
+    id: "9",
+    serviceId: "decks",
+    image: "https://via.placeholder.com/400x300?text=Deque+3",
+  },
+  {
+    id: "10",
+    serviceId: "decks",
+    image: "https://via.placeholder.com/400x300?text=Deque+4",
+  },
+  {
+    id: "11",
+    serviceId: "decks",
+    image: "https://via.placeholder.com/400x300?text=Deque+5",
+  },
+  {
+    id: "12",
+    serviceId: "decks",
+    image: "https://via.placeholder.com/400x300?text=Deque+6",
+  },
 
   // Drywall
-  { id: "13", serviceId: "drywall", image: "https://via.placeholder.com/400x300?text=Drywall+1" },
-  { id: "14", serviceId: "drywall", image: "https://via.placeholder.com/400x300?text=Drywall+2" },
-  { id: "15", serviceId: "drywall", image: "https://via.placeholder.com/400x300?text=Drywall+3" },
-  { id: "16", serviceId: "drywall", image: "https://via.placeholder.com/400x300?text=Drywall+4" },
-  { id: "17", serviceId: "drywall", image: "https://via.placeholder.com/400x300?text=Drywall+5" },
-  { id: "18", serviceId: "drywall", image: "https://via.placeholder.com/400x300?text=Drywall+6" },
+  {
+    id: "13",
+    serviceId: "drywall",
+    image: "https://via.placeholder.com/400x300?text=Drywall+1",
+  },
+  {
+    id: "14",
+    serviceId: "drywall",
+    image: "https://via.placeholder.com/400x300?text=Drywall+2",
+  },
+  {
+    id: "15",
+    serviceId: "drywall",
+    image: "https://via.placeholder.com/400x300?text=Drywall+3",
+  },
+  {
+    id: "16",
+    serviceId: "drywall",
+    image: "https://via.placeholder.com/400x300?text=Drywall+4",
+  },
+  {
+    id: "17",
+    serviceId: "drywall",
+    image: "https://via.placeholder.com/400x300?text=Drywall+5",
+  },
+  {
+    id: "18",
+    serviceId: "drywall",
+    image: "https://via.placeholder.com/400x300?text=Drywall+6",
+  },
 
   // Paisagismo
-  { id: "19", serviceId: "landscaping", image: "https://via.placeholder.com/400x300?text=Paisagismo+1" },
-  { id: "20", serviceId: "landscaping", image: "https://via.placeholder.com/400x300?text=Paisagismo+2" },
-  { id: "21", serviceId: "landscaping", image: "https://via.placeholder.com/400x300?text=Paisagismo+3" },
-  { id: "22", serviceId: "landscaping", image: "https://via.placeholder.com/400x300?text=Paisagismo+4" },
-  { id: "23", serviceId: "landscaping", image: "https://via.placeholder.com/400x300?text=Paisagismo+5" },
-  { id: "24", serviceId: "landscaping", image: "https://via.placeholder.com/400x300?text=Paisagismo+6" },
+  {
+    id: "19",
+    serviceId: "landscaping",
+    image: "https://via.placeholder.com/400x300?text=Paisagismo+1",
+  },
+  {
+    id: "20",
+    serviceId: "landscaping",
+    image: "https://via.placeholder.com/400x300?text=Paisagismo+2",
+  },
+  {
+    id: "21",
+    serviceId: "landscaping",
+    image: "https://via.placeholder.com/400x300?text=Paisagismo+3",
+  },
+  {
+    id: "22",
+    serviceId: "landscaping",
+    image: "https://via.placeholder.com/400x300?text=Paisagismo+4",
+  },
+  {
+    id: "23",
+    serviceId: "landscaping",
+    image: "https://via.placeholder.com/400x300?text=Paisagismo+5",
+  },
+  {
+    id: "24",
+    serviceId: "landscaping",
+    image: "https://via.placeholder.com/400x300?text=Paisagismo+6",
+  },
 
   // Telhados
-  { id: "25", serviceId: "roof", image: "https://via.placeholder.com/400x300?text=Telhado+1" },
-  { id: "26", serviceId: "roof", image: "https://via.placeholder.com/400x300?text=Telhado+2" },
-  { id: "27", serviceId: "roof", image: "https://via.placeholder.com/400x300?text=Telhado+3" },
-  { id: "28", serviceId: "roof", image: "https://via.placeholder.com/400x300?text=Telhado+4" },
-  { id: "29", serviceId: "roof", image: "https://via.placeholder.com/400x300?text=Telhado+5" },
-  { id: "30", serviceId: "roof", image: "https://via.placeholder.com/400x300?text=Telhado+6" },
+  {
+    id: "25",
+    serviceId: "roof",
+    image: "https://via.placeholder.com/400x300?text=Telhado+1",
+  },
+  {
+    id: "26",
+    serviceId: "roof",
+    image: "https://via.placeholder.com/400x300?text=Telhado+2",
+  },
+  {
+    id: "27",
+    serviceId: "roof",
+    image: "https://via.placeholder.com/400x300?text=Telhado+3",
+  },
+  {
+    id: "28",
+    serviceId: "roof",
+    image: "https://via.placeholder.com/400x300?text=Telhado+4",
+  },
+  {
+    id: "29",
+    serviceId: "roof",
+    image: "https://via.placeholder.com/400x300?text=Telhado+5",
+  },
+  {
+    id: "30",
+    serviceId: "roof",
+    image: "https://via.placeholder.com/400x300?text=Telhado+6",
+  },
 ];
 
 export default function Portfolio() {
   const [activeService, setActiveService] = useState(services[0]);
 
   const filteredItems = portfolioItems.filter(
-    (item) => item.serviceId === activeService.id
+    (item) => item.serviceId === activeService.id,
   );
 
   const contentVariants = {
@@ -113,7 +236,7 @@ export default function Portfolio() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-12 flex flex-wrap gap-1 border-t border-b border-zinc-200"
+          className="mb-12 flex flex-wrap md:gap-1 border-t border-b border-zinc-200"
         >
           {services.map((service, index) => (
             <motion.button
@@ -125,10 +248,10 @@ export default function Portfolio() {
               onClick={() => setActiveService(service)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
-              className={`px-6 py-3 transition-all cursor-pointer duration-300 ${
+              className={`px-6 py-3  transition-all cursor-pointer duration-300 ${
                 activeService.id === service.id
                   ? "bg-zinc-700 text-white font-medium"
-                  : "bg-transparent text-zinc-500 border-r border-l border-zinc-200 hover:bg-zinc-200 hover:text-zinc-900"
+                  : "bg-transparent text-zinc-500 border-r border-l border-t border-b border-zinc-200 hover:bg-zinc-200 hover:text-zinc-900"
               }`}
             >
               {service.name}

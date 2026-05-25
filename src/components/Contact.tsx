@@ -179,9 +179,9 @@ export default function Contact({ id }: ContactProps) {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-16 px-6"
         >
-          <p className="text-sm font-semibold text-muted-foreground mb-2 uppercase tracking-wide">
+          <p className="text-sm font-light text-secondary mb-2 uppercase tracking-wide">
             Contact
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -200,7 +200,7 @@ export default function Contact({ id }: ContactProps) {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid md:grid-cols-1 gap-6 mb-16 border-t border-b border-zinc-200"
+            className="grid md:grid-cols-1 gap-6 mb-16 md:border-t md:border-b border-zinc-200"
           >
             {/* Phone */}
             <motion.div
@@ -235,26 +235,6 @@ export default function Contact({ id }: ContactProps) {
                 contact@reis.com
               </a>
             </motion.div>
-
-            {/* Location */}
-            <motion.div
-              variants={itemVariants}
-              className="flex flex-col items-center text-center p-6 bg-white transition duration-300 border-t border-zinc-200"
-            >
-              <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
-                <MapPin className="w-6 h-6 text-accent" />
-              </div>
-              <h4 className="font-semibold text-foreground mb-2">Location</h4>
-              <a
-                href={googleMapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-zinc-400 hover:text-zinc-900 transition-colors duration-300 flex items-center gap-2 justify-center"
-              >
-                Your City, State
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            </motion.div>
           </motion.div>
 
           {/* Form - Centered */}
@@ -264,7 +244,7 @@ export default function Contact({ id }: ContactProps) {
             whileInView="visible"
             viewport={{ once: true }}
             onSubmit={handleSubmit}
-            className=" p-8 md:p-12 border-l border-r bg-white border-zinc-200"
+            className=" p-8 md:p-12 border-t md:border-t-none border-l border-r bg-white border-zinc-200"
           >
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               {/* Name */}

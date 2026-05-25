@@ -38,21 +38,21 @@ export default function About({ id }: AboutProps) {
   return (
     <section
       id={id || "about"}
-      className="p-20 border-t border-zinc-200 w-full"
+      className="p-8 md:p-20 border-t border-zinc-200 w-full"
     >
-      <div className="container">
+      <div className="container md:w-auto w-full">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row md:items-end md:justify-between mb-12"
+          className="flex flex-col-reverse md:flex-row md:items-end md:justify-between mb-12"
         >
           <motion.a
             href="#contact"
             whileHover={{ scale: 1.05 }}
-            className="mt-6 md:mt-0 md:ml-0 flex items-center gap-2 text-secondary border-b border-transparent hover:border-secondary font-semibold hover:text-accent transition-colors duration-300 whitespace-nowrap"
+            className="mt-6 self-end  md:mt-0 md:ml-0 flex items-center gap-2 text-secondary border-b border-transparent hover:border-secondary font-semibold hover:text-accent transition-colors duration-300 whitespace-nowrap"
           >
             Contact us
             <ArrowRight className="w-5 h-5" />
@@ -68,14 +68,14 @@ export default function About({ id }: AboutProps) {
         </motion.div>
 
         {/* Content Grid */}
-        <div className="grid md:grid-cols-2  items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-start">
           {/* Left Column - Text Content */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="space-y-6 p-12 border-t border-b border-l border-zinc-200 h-163"
+            className="space-y-6 px-6 md:px-6 py-12 border-t md:border-b border-l border-r border-zinc-200 md:h-163"
           >
             <motion.div variants={itemVariants}>
               <h3 className="text-2xl font-bold text-foreground mb-4">
@@ -133,37 +133,18 @@ export default function About({ id }: AboutProps) {
             viewport={{ once: true }}
             className="space-y-6 border border-zinc-200"
           >
-            {/* Image Placeholder */}
-            <motion.div
-              variants={itemVariants}
-              className="relative w-full h-96  overflow-hidden border-b border-zinc-200"
-            >
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-5xl">(foto)</span>
-                  </div>
-                  <p className="text-foreground/60 font-semibold">
-                    Pai e Filho
-                  </p>
-                  <p className="text-foreground/40 text-sm">
-                    Dedicados à Excelência
-                  </p>
-                </div>
-              </div>
-            </motion.div>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {stats.map((stat, index) => (
                 <motion.div
                   key={index}
                   variants={itemVariants}
                   className={`p-6 duration-300 hover:bg-zinc-100 transition border-t border-zinc-200 ${
                     (index == 0 && "border-b border-r") ||
-                    (index == 1 && "border-b border-l") ||
-                    (index == 2 && "border-r") ||
-                    (index == 3 && "border-l")
+                    (index == 1 && "border-b md:border-l") ||
+                    (index == 2 && "md:border-r") ||
+                    (index == 3 && "md:border-l")
                   }`}
                 >
                   <div className="text-3xl font-bold text-zinc-700 mb-2">

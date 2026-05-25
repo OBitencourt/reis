@@ -1,7 +1,7 @@
 const TrustBar = () => {
   return (
     <section className="border-b border-zinc-200 w-full">
-      <div className="max-w-7xl mx-auto px-6 py-8 grid md:grid-cols-3 gap-8">
+      <div className=" max-w-7xl mx-auto py-8 grid md:grid-cols-3 gap-8">
         {[
           "Mais de 120 projetos entregues",
           "Equipe especializada",
@@ -9,7 +9,7 @@ const TrustBar = () => {
         ].map((item) => (
           <div
             key={item}
-            className="text-center text-sm uppercase tracking-[0.18em] text-zinc-400"
+            className="text-center text-sm uppercase justify-center tracking-[0.18em] text-zinc-400"
           >
             {item}
           </div>
