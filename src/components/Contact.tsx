@@ -152,7 +152,6 @@ export default function Contact({ id }: ContactProps) {
     }
   };
 
-  const googleMapsUrl = "https://www.google.com/maps/search/Your+City,+State";
 
   return (
     <section id={id || "contact"} className="py-20 border-t w-full border-zinc-200 flex justify-center">
@@ -215,7 +214,7 @@ export default function Contact({ id }: ContactProps) {
                 href="tel:(555)123-4567"
                 className="text-zinc-400 hover:text-zinc-900 transition-colors duration-300"
               >
-                (555) 123-4567
+                +1 (416) 829-6762
               </a>
             </motion.div>
 
@@ -232,7 +231,7 @@ export default function Contact({ id }: ContactProps) {
                 href="mailto:contact@reis.com"
                 className="text-zinc-400 hover:text-zinc-900 transition-colors duration-300"
               >
-                contact@reis.com
+                rei’s@reisgeneralconstructioncom.com
               </a>
             </motion.div>
           </motion.div>
@@ -280,7 +279,7 @@ export default function Contact({ id }: ContactProps) {
                   className={`w-full px-4 py-3 border rounded-sm focus:outline-none focus:border-secondary focus:ring-2 focus:ring-primary/20 transition-all duration-300 bg-white ${
                     errors.phone ? "border-red-500" : "border-zinc-500"
                   }`}
-                  placeholder="(555) 123-4567"
+                  placeholder="(999) 999-9999"
                 />
                 {errors.phone && (
                   <p className="text-red-500 text-sm mt-1">{errors.phone}</p>

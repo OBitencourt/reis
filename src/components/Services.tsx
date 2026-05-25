@@ -14,20 +14,20 @@ interface Service {
 const services: Service[] = [
   {
     id: "fences",
-    name: "Cercas",
+    name: "Fences",
     image:
       "https://d2xsxph8kpxj0f.cloudfront.net/310519663348555494/8GftHgkLDKskeRnEf2JXtm/service-fences-GTYyKHcjHM668b4J85N72Q.webp",
     description:
-      "Instalação profissional de cercas modernas em diversos materiais. Desde cercas de madeira até compostas, oferecemos soluções duráveis e esteticamente atraentes para sua propriedade.",
+      "Professional installation of modern fences using a variety of materials. From wooden fences to composite options, we provide durable and visually appealing solutions for your property.",
     duration: "5-10 days",
   },
   {
     id: "decks",
-    name: "Deques",
+    name: "Decks",
     image:
       "https://d2xsxph8kpxj0f.cloudfront.net/310519663348555494/8GftHgkLDKskeRnEf2JXtm/hero-construction-NnbRubWQ8Fvp3JyAx75z3r.webp",
     description:
-      "Construção de decks de madeira ou material composto, perfeitos para áreas externas. Designs personalizados que transformam seu espaço em um local aconchegante para relaxar.",
+      "Construction of wooden or composite decks, perfect for outdoor spaces. Custom designs that transform your area into a cozy place to relax.",
     duration: "7-15 days",
   },
   {
@@ -36,25 +36,25 @@ const services: Service[] = [
     image:
       "https://d2xsxph8kpxj0f.cloudfront.net/310519663348555494/8GftHgkLDKskeRnEf2JXtm/service-drywall-Qiyoir8k3LizWwfeW6EtPw.webp",
     description:
-      "Instalação e acabamento de drywall para interiores modernos. Paredes limpas e precisas, com acabamento profissional que garante durabilidade e beleza.",
+      "Drywall installation and finishing for modern interiors. Clean and precise walls with a professional finish that ensures durability and beauty.",
     duration: "3-7 days",
   },
   {
     id: "landscaping",
-    name: "Paisagismo",
+    name: "Landscaping",
     image:
       "https://d2xsxph8kpxj0f.cloudfront.net/310519663348555494/8GftHgkLDKskeRnEf2JXtm/service-landscaping-eXWJXbXxuKP8Cc2VSC.webp",
     description:
-      "Projetos de paisagismo que transformam espaços externos. Desde plantações até hardscaping, criamos ambientes que refletem seu estilo e aumentam o valor da propriedade.",
+      "Landscaping projects that transform outdoor spaces. From planting to hardscaping, we create environments that reflect your style and increase your property's value.",
     duration: "10-20 days",
   },
   {
     id: "roof",
-    name: "Telhados",
+    name: "Roofs",
     image:
       "https://d2xsxph8kpxj0f.cloudfront.net/310519663348555494/8GftHgkLDKskeRnEf2JXtm/service-roof-9vdpy5tqRYjAwiSxchkAo4.webp",
     description:
-      "Instalação e reparo de telhados com materiais de qualidade superior. Proteção confiável para sua casa com acabamento profissional e garantia de durabilidade.",
+      "Roof installation and repair using premium-quality materials. Reliable protection for your home with professional finishing and long-lasting durability.",
     duration: "7-14 days",
   },
 ];
@@ -95,10 +95,10 @@ export default function Services({ id }: ServicesProps) {
         >
           <div className="flex-1">
             <p className="text-md font-light text-secondary text-muted-foreground mb-2 uppercase tracking-wide">
-              Serviços
+              Services
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-              Soluções completas para qualquer projeto.
+              Complete solutions for any project.
             </h2>
           </div>
           <motion.a
@@ -106,7 +106,7 @@ export default function Services({ id }: ServicesProps) {
             whileHover={{ scale: 1.05 }}
             className="mt-6 md:ml-8 mr-8 flex items-center gap-2 text-secondary border-b border-transparent hover:border-b-secondary font-semibold hover:text-accent transition-colors duration-300 whitespace-nowrap"
           >
-            Make a Quote
+            Request a Quote
             <ArrowRight className="w-5 h-5" />
           </motion.a>
         </motion.div>

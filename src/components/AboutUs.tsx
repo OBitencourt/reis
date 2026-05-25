@@ -29,10 +29,10 @@ export default function About({ id }: AboutProps) {
   };
 
   const stats = [
-    { label: "Projetos Concluídos", value: "100+" },
-    { label: "Anos de Experiência", value: "15+" },
-    { label: "Clientes Satisfeitos", value: "500+" },
-    { label: "Taxa de Satisfação", value: "98%" },
+    { label: "Completed Projects", value: "100+" },
+    { label: "Years of Experience", value: "15+" },
+    { label: "Satisfied Clients", value: "500+" },
+    { label: "Satisfaction Rate", value: "98%" },
   ];
 
   return (
@@ -59,10 +59,10 @@ export default function About({ id }: AboutProps) {
           </motion.a>
           <div className="flex-1">
             <p className="text-sm text-end font-light text-secondary mb-2 uppercase tracking-wide">
-              Sobre Nós
+              About uts
             </p>
             <h2 className="text-4xl text-end md:text-5xl font-bold text-foreground">
-              Construindo Sonhos, Reformando Vidas.
+              Building Dreams, Renovating Lives.
             </h2>
           </div>
         </motion.div>
@@ -79,38 +79,33 @@ export default function About({ id }: AboutProps) {
           >
             <motion.div variants={itemVariants}>
               <h3 className="text-2xl font-bold text-foreground mb-4">
-                Quem Somos
+                Who We Are
               </h3>
               <p className="text-lg text-foreground/80 leading-relaxed">
-                A Rei's é uma empresa familiar com mais de 15 anos de
-                experiência em construção e reforma. Nascida da paixão de um pai
-                e filho pela excelência, transformamos projetos em realidades
-                com qualidade, dedicação e atenção aos detalhes.
+                Rei's is a family-owned company with over 15 years of experience in construction and renovation. Born from the passion of a father and son for excellence, we transform projects into reality with quality, dedication, and attention to detail.
               </p>
             </motion.div>
 
             <motion.div variants={itemVariants}>
               <h3 className="text-2xl font-bold text-foreground mb-4">
-                Nossa Missão
+                Our Mission
               </h3>
               <p className="text-lg text-foreground/80 leading-relaxed">
-                Oferecer soluções completas de construção e reforma que superem
-                as expectativas dos nossos clientes, combinando técnica,
-                criatividade e um atendimento personalizado em cada projeto.
+                To provide complete construction and renovation solutions that exceed our clients' expectations by combining technique, creativity, and personalized service in every project.
               </p>
             </motion.div>
 
             <motion.div variants={itemVariants}>
               <h3 className="text-2xl font-bold text-foreground mb-4">
-                Por Que Nos Escolher
+                Why Choose Us
               </h3>
               <ul className="space-y-3">
                 {[
-                  "Equipe experiente e qualificada",
-                  "Materiais de alta qualidade",
-                  "Prazos respeitados",
-                  "Atendimento personalizado",
-                  "Garantia em todos os serviços",
+                  "Experienced and qualified team",
+                  "High-quality materials",
+                  "Deadlines respected",
+                  "Personalized service",
+                  "Warranty on all services",
                 ].map((item, index) => (
                   <motion.li
                     key={index}

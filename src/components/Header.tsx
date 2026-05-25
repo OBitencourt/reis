@@ -55,10 +55,9 @@ export default function Header() {
           {/* NAV */}
           <nav className="hidden lg:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
             {[
-              ['Serviços', '#services'],
-              ['Sobre', '#about'],
-              ['Depoimentos', '#testimonials'],
-              ['Contato', '#contact'],
+              ['Services', '#services'],
+              ['About us', '#about'],
+              ['Contact', '#contact'],
             ].map(([label, href]) => (
               <a
                 key={label}

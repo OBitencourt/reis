@@ -46,20 +46,20 @@ export default function Footer() {
               className="h-auto w-40"
             />
             <p className="text-white/80 text-sm">
-              Construindo e reformando com excelência desde 2010.
+              Building and renovating with excellence since 2010.
             </p>
           </motion.div>
 
           {/* Quick Links */}
           <motion.div variants={itemVariants}>
-            <h4 className="font-semibold mb-4">Links Rápidos</h4>
+            <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <a
                   href="#services"
                   className="text-white/80 hover:text-white transition-colors"
                 >
-                  Serviços
+                  Services
                 </a>
               </li>
               <li>
@@ -67,7 +67,7 @@ export default function Footer() {
                   href="#about"
                   className="text-white/80 hover:text-white transition-colors"
                 >
-                  Sobre
+                  About Us
                 </a>
               </li>
               <li>
@@ -75,7 +75,7 @@ export default function Footer() {
                   href="#portfolio"
                   className="text-white/80 hover:text-white transition-colors"
                 >
-                  Portfólio
+                  Portfolio
                 </a>
               </li>
               <li>
@@ -83,7 +83,7 @@ export default function Footer() {
                   href="#contact"
                   className="text-white/80 hover:text-white transition-colors"
                 >
-                  Contato
+                  Contact
                 </a>
               </li>
             </ul>
@@ -91,19 +91,22 @@ export default function Footer() {
 
           {/* Services */}
           <motion.div variants={itemVariants}>
-            <h4 className="font-semibold mb-4">Serviços</h4>
+            <h4 className="font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-sm">
-              <li className="text-white/80">Cercas</li>
-              <li className="text-white/80">Deques</li>
+              <li className="text-white/80">Fences</li>
+              <li className="text-white/80">Decks</li>
               <li className="text-white/80">Drywall</li>
-              <li className="text-white/80">Paisagismo</li>
+              <li className="text-white/80">Roofs</li>
+              <li className="text-white/80">Interlock</li>
+              <li className="text-white/80">Gates</li>
+              <li className="text-white/80">Railings</li>
             </ul>
           </motion.div>
 
           {/* Social */}
           <motion.div variants={itemVariants}>
-            <h4 className="font-semibold mb-4">Redes Sociais</h4>
-            <div className="flex gap-4 justify-center">
+            <h4 className="font-semibold mb-4">Social Media</h4>
+            <div className="flex gap-4 md:justify-start justify-center">
               <a
                 href="#"
                 className="w-10 h-10 bg-white/20 rounded-lg hover:bg-white/30 flex items-center justify-center hover:bg-accent transition"
@@ -140,8 +143,7 @@ export default function Footer() {
             className="text-center text-white/60 text-sm"
           >
             <p>
-              &copy; {currentYear} Rei's Construction. Todos os direitos
-              reservados.
+              &copy; {currentYear} Rei's General Construction. All rights reserved.
             </p>
           </motion.div>
         </div>
