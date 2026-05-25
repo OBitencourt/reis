@@ -6,6 +6,7 @@ import { ArrowRight } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 
+
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
@@ -56,7 +57,6 @@ export default function Header() {
             {[
               ['Serviços', '#services'],
               ['Sobre', '#about'],
-              ['Portfólio', '#portfolio'],
               ['Depoimentos', '#testimonials'],
               ['Contato', '#contact'],
             ].map(([label, href]) => (
@@ -70,6 +70,16 @@ export default function Header() {
                 <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-zinc-200 transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
+            
+            {/* Portfólio Link com Next.js Link */}
+            <Link
+              href="/portfolio"
+              className={`group relative text-xs uppercase tracking-[0.18em] font-extralight text-zinc-300  hover:text-zinc-100 transition-all`}
+            >
+              Portfólio
+
+              <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-zinc-200 transition-all duration-300 group-hover:w-full" />
+            </Link>
           </nav>
 
           {/* CTA */}
@@ -135,7 +145,6 @@ export default function Header() {
               {[
                 ['Serviços', '#services'],
                 ['Sobre', '#about'],
-                ['Portfólio', '#portfolio'],
                 ['Contato', '#contact'],
               ].map(([label, href]) => (
                 <a
@@ -146,6 +155,14 @@ export default function Header() {
                   {label}
                 </a>
               ))}
+              
+              {/* Portfólio Link Mobile com Next.js Link */}
+              <Link
+                href="/portfolio"
+                className="uppercase tracking-[0.18em] text-sm text-zinc-300"
+              >
+                Portfólio
+              </Link>
             </div>
           </motion.div>
         )}
