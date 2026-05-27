@@ -40,14 +40,14 @@ export default function About({ id }: AboutProps) {
       id={id || "about"}
       className="p-8 md:p-20 border-t border-zinc-200 w-full"
     >
-      <div className="container md:w-auto w-full">
+      <div className="container md:w-auto w-full md:flex md:flex-col md:items-center">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="flex flex-col-reverse md:flex-row md:items-end md:justify-between mb-12"
+          className="flex flex-col-reverse md:w-full md:flex-row md:items-end md:justify-between mb-12"
         >
           <motion.a
             href="#contact"
@@ -68,7 +68,7 @@ export default function About({ id }: AboutProps) {
         </motion.div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:flex md:flex-col md:w-1/2 items-start">
           {/* Left Column - Text Content */}
           <motion.div
             variants={containerVariants}
@@ -126,7 +126,7 @@ export default function About({ id }: AboutProps) {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="space-y-6 border border-zinc-200"
+            className="space-y-6 border w-full border-zinc-200"
           >
 
             {/* Stats Grid */}

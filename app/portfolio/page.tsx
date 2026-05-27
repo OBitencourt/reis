@@ -1,4 +1,4 @@
-"use client";
+'use client'
 
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -15,183 +15,64 @@ interface Service {
 }
 
 const services: Service[] = [
-  { id: "fences", name: "Fences" },
   { id: "decks", name: "Decks" },
-  { id: "drywall", name: "Drywall" },
-  { id: "landscaping", name: "Landscaping" },
-  { id: "roof", name: "Roofs" },
+  { id: "fences", name: "Fences" },
   { id: "interlock", name: "Interlock" },
   { id: "railings", name: "Railings" },
+  { id: "roof", name: "Roof" },
   { id: "gates", name: "Gates" },
 ];
 
 const portfolioItems: PortfolioItem[] = [
-  // Cercas
-  {
-    id: "1",
-    serviceId: "fences",
-    image: "https://via.placeholder.com/400x300?text=Cerca+1",
-  },
-  {
-    id: "2",
-    serviceId: "fences",
-    image: "https://via.placeholder.com/400x300?text=Cerca+2",
-  },
-  {
-    id: "3",
-    serviceId: "fences",
-    image: "https://via.placeholder.com/400x300?text=Cerca+3",
-  },
-  {
-    id: "4",
-    serviceId: "fences",
-    image: "https://via.placeholder.com/400x300?text=Cerca+4",
-  },
-  {
-    id: "5",
-    serviceId: "fences",
-    image: "https://via.placeholder.com/400x300?text=Cerca+5",
-  },
-  {
-    id: "6",
-    serviceId: "fences",
-    image: "https://via.placeholder.com/400x300?text=Cerca+6",
-  },
+  // Decks
+  { id: "1", serviceId: "decks", image: "/deck-2.jpg" },
+  { id: "2", serviceId: "decks", image: "/deck-3.jpg" },
+  { id: "3", serviceId: "decks", image: "/deck-inicio.jpg" },
+  { id: "4", serviceId: "decks", image: "/deck-interlock-railings.jpeg" },
+  { id: "5", serviceId: "decks", image: "/deck-interlock-railings-2.jpeg" },
 
-  // Deques
-  {
-    id: "7",
-    serviceId: "decks",
-    image: "https://via.placeholder.com/400x300?text=Deque+1",
-  },
-  {
-    id: "8",
-    serviceId: "decks",
-    image: "https://via.placeholder.com/400x300?text=Deque+2",
-  },
-  {
-    id: "9",
-    serviceId: "decks",
-    image: "https://via.placeholder.com/400x300?text=Deque+3",
-  },
-  {
-    id: "10",
-    serviceId: "decks",
-    image: "https://via.placeholder.com/400x300?text=Deque+4",
-  },
-  {
-    id: "11",
-    serviceId: "decks",
-    image: "https://via.placeholder.com/400x300?text=Deque+5",
-  },
-  {
-    id: "12",
-    serviceId: "decks",
-    image: "https://via.placeholder.com/400x300?text=Deque+6",
-  },
+  // Fences
+  { id: "6", serviceId: "fences", image: "/fence-1.jpeg" },
+  { id: "7", serviceId: "fences", image: "/fence-2.jpeg" },
+  { id: "8", serviceId: "fences", image: "/fence-3.jpeg" },
+  { id: "9", serviceId: "fences", image: "/fence-4.jpeg" },
 
-  // Drywall
-  {
-    id: "13",
-    serviceId: "drywall",
-    image: "https://via.placeholder.com/400x300?text=Drywall+1",
-  },
-  {
-    id: "14",
-    serviceId: "drywall",
-    image: "https://via.placeholder.com/400x300?text=Drywall+2",
-  },
-  {
-    id: "15",
-    serviceId: "drywall",
-    image: "https://via.placeholder.com/400x300?text=Drywall+3",
-  },
-  {
-    id: "16",
-    serviceId: "drywall",
-    image: "https://via.placeholder.com/400x300?text=Drywall+4",
-  },
-  {
-    id: "17",
-    serviceId: "drywall",
-    image: "https://via.placeholder.com/400x300?text=Drywall+5",
-  },
-  {
-    id: "18",
-    serviceId: "drywall",
-    image: "https://via.placeholder.com/400x300?text=Drywall+6",
-  },
+  // Interlock
+  { id: "10", serviceId: "interlock", image: "/interlock-1.jpeg" },
+  { id: "11", serviceId: "interlock", image: "/interlock-2.jpeg" },
+  { id: "12", serviceId: "interlock", image: "/interlock-3.jpeg" },
+  { id: "13", serviceId: "interlock", image: "/interlock-4-wood-sidings.jpg" },
+  { id: "14", serviceId: "interlock", image: "/interlock-5.jpg" },
+  { id: "15", serviceId: "interlock", image: "/interlock-6.jpg" },
+  { id: "16", serviceId: "interlock", image: "/interlock-e-railings.jpg" },
 
-  // Paisagismo
-  {
-    id: "19",
-    serviceId: "landscaping",
-    image: "https://via.placeholder.com/400x300?text=Paisagismo+1",
-  },
-  {
-    id: "20",
-    serviceId: "landscaping",
-    image: "https://via.placeholder.com/400x300?text=Paisagismo+2",
-  },
-  {
-    id: "21",
-    serviceId: "landscaping",
-    image: "https://via.placeholder.com/400x300?text=Paisagismo+3",
-  },
-  {
-    id: "22",
-    serviceId: "landscaping",
-    image: "https://via.placeholder.com/400x300?text=Paisagismo+4",
-  },
-  {
-    id: "23",
-    serviceId: "landscaping",
-    image: "https://via.placeholder.com/400x300?text=Paisagismo+5",
-  },
-  {
-    id: "24",
-    serviceId: "landscaping",
-    image: "https://via.placeholder.com/400x300?text=Paisagismo+6",
-  },
+  // Railings
+  { id: "17", serviceId: "railings", image: "/railings_e_deque-1.jpeg" },
+  { id: "18", serviceId: "railings", image: "/railings-1.jpeg" },
+  { id: "19", serviceId: "railings", image: "/railings-2.jpeg" },
+  { id: "20", serviceId: "railings", image: "/railings-3.jpg" },
+  { id: "21", serviceId: "railings", image: "/railings-4-wood-sidings.jpg" },
+  { id: "22", serviceId: "railings", image: "/railings-5.jpg" },
 
-  // Telhados
-  {
-    id: "25",
-    serviceId: "roof",
-    image: "https://via.placeholder.com/400x300?text=Telhado+1",
-  },
-  {
-    id: "26",
-    serviceId: "roof",
-    image: "https://via.placeholder.com/400x300?text=Telhado+2",
-  },
-  {
-    id: "27",
-    serviceId: "roof",
-    image: "https://via.placeholder.com/400x300?text=Telhado+3",
-  },
-  {
-    id: "28",
-    serviceId: "roof",
-    image: "https://via.placeholder.com/400x300?text=Telhado+4",
-  },
-  {
-    id: "29",
-    serviceId: "roof",
-    image: "https://via.placeholder.com/400x300?text=Telhado+5",
-  },
-  {
-    id: "30",
-    serviceId: "roof",
-    image: "https://via.placeholder.com/400x300?text=Telhado+6",
-  },
+  // Roof
+  { id: "23", serviceId: "roof", image: "/roof-4.jpg" },
+  { id: "24", serviceId: "roof", image: "/wood-roof-1.jpeg" },
+  { id: "25", serviceId: "roof", image: "/wood-roof-2.jpeg" },
+  { id: "26", serviceId: "roof", image: "/wood-sidings-gate.jpg" },
+  { id: "27", serviceId: "roof", image: "/woof-roof-and-walls-3.jpeg" },
+
+  // Gates
+  { id: "28", serviceId: "gates", image: "/gate-1.jpg" },
+
+  // Sauna (no tab, just portfolio)
+  { id: "29", serviceId: "sauna", image: "/sauna-1.jpg" },
 ];
 
 export default function Portfolio() {
   const [activeService, setActiveService] = useState(services[0]);
 
   const filteredItems = portfolioItems.filter(
-    (item) => item.serviceId === activeService.id,
+    (item) => item.serviceId === activeService.id
   );
 
   const contentVariants = {
@@ -236,7 +117,7 @@ export default function Portfolio() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-12 flex flex-wrap md:gap-1 border-t border-b border-zinc-200"
+          className="mb-12 flex flex-wrap gap-1 border-t border-b border-zinc-200"
         >
           {services.map((service, index) => (
             <motion.button
@@ -248,10 +129,10 @@ export default function Portfolio() {
               onClick={() => setActiveService(service)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
-              className={`px-6 py-3  transition-all cursor-pointer duration-300 ${
+              className={`px-6 py-3 transition-all cursor-pointer duration-300 ${
                 activeService.id === service.id
                   ? "bg-zinc-700 text-white font-medium"
-                  : "bg-transparent text-zinc-500 border-r border-l border-t border-b border-zinc-200 hover:bg-zinc-200 hover:text-zinc-900"
+                  : "bg-transparent text-zinc-500 border-r border-l border-zinc-200 hover:bg-zinc-200 hover:text-zinc-900"
               }`}
             >
               {service.name}
@@ -280,7 +161,7 @@ export default function Portfolio() {
           initial="hidden"
           animate="visible"
           exit="exit"
-          className="grid grid-cols-1 md:grid-cols-3 border-t border-b py-1 border-zinc-200 gap-6 md:gap-8 px-5"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 px-5"
         >
           {filteredItems.map((item, index) => (
             <motion.div
@@ -289,7 +170,7 @@ export default function Portfolio() {
               variants={imageVariants}
               initial="hidden"
               animate="visible"
-              className={"overflow-hidden border border-zinc-200 h-64 md:h-80"}
+              className="overflow-hidden p-1 border-zinc-200 border h-64 md:h-80"
             >
               <img
                 src={item.image}

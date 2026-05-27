@@ -15,8 +15,7 @@ const services: Service[] = [
   {
     id: "fences",
     name: "Fences",
-    image:
-      "https://d2xsxph8kpxj0f.cloudfront.net/310519663348555494/8GftHgkLDKskeRnEf2JXtm/service-fences-GTYyKHcjHM668b4J85N72Q.webp",
+    image: "/fence-3.jpeg",
     description:
       "Professional installation of modern fences using a variety of materials. From wooden fences to composite options, we provide durable and visually appealing solutions for your property.",
     duration: "5-10 days",
@@ -24,8 +23,7 @@ const services: Service[] = [
   {
     id: "decks",
     name: "Decks",
-    image:
-      "https://d2xsxph8kpxj0f.cloudfront.net/310519663348555494/8GftHgkLDKskeRnEf2JXtm/hero-construction-NnbRubWQ8Fvp3JyAx75z3r.webp",
+    image: "/deck-2.jpg",
     description:
       "Construction of wooden or composite decks, perfect for outdoor spaces. Custom designs that transform your area into a cozy place to relax.",
     duration: "7-15 days",
@@ -40,22 +38,36 @@ const services: Service[] = [
     duration: "3-7 days",
   },
   {
-    id: "landscaping",
-    name: "Landscaping",
-    image:
-      "https://d2xsxph8kpxj0f.cloudfront.net/310519663348555494/8GftHgkLDKskeRnEf2JXtm/service-landscaping-eXWJXbXxuKP8Cc2VSC.webp",
-    description:
-      "Landscaping projects that transform outdoor spaces. From planting to hardscaping, we create environments that reflect your style and increase your property's value.",
-    duration: "10-20 days",
-  },
-  {
     id: "roof",
     name: "Roofs",
-    image:
-      "https://d2xsxph8kpxj0f.cloudfront.net/310519663348555494/8GftHgkLDKskeRnEf2JXtm/service-roof-9vdpy5tqRYjAwiSxchkAo4.webp",
+    image: "/wood-roof-1.jpeg",
     description:
       "Roof installation and repair using premium-quality materials. Reliable protection for your home with professional finishing and long-lasting durability.",
     duration: "7-14 days",
+  },
+  {
+    id: "gates",
+    name: "Gates",
+    image: "/gate-1.jpg",
+    description:
+      "Professional installation of stylish and secure gates for all properties. Custom designs that combine security with aesthetics.",
+    duration: "3-8 days",
+  },
+  {
+    id: "railings",
+    name: "Railings",
+    image: "/railings-3.jpg",
+    description:
+      "Elegant railings for stairs, decks, and balconies. Durable and stylish solutions that enhance any space.",
+    duration: "5-10 days",
+  },
+  {
+    id: "interlock",
+    name: "Interlock",
+    image: "/interlock-5.jpg",
+    description:
+      "Professional interlock paving for driveways, patios, and outdoor spaces. Durable and aesthetically pleasing.",
+    duration: "5-12 days",
   },
 ];
 
