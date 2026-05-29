@@ -26,10 +26,12 @@ export default function Header() {
       initial={{ opacity: 0, y: -80 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className={`fixed top-0 left-0 z-50  transition-all duration-500 ${
+      className={`top-0 left-0 z-50 fixed  transition-all duration-500 ${
         scrolled
-          ? 'bg-[#0c0a07]/60 backdrop-blur-xl w-[90%] left-[5%] top-5 rounded-3xl'
-          : 'bg-transparent w-full'
+          ? 'bg-[#0c0a07]/60 backdrop-blur-xl  w-[90%] left-[5%] top-5 rounded-3xl'
+          : `bg-[#0c0a07]/60  w-full ${
+            menuOpen ? "  backdrop-blur-xl" : "bg-transparent"
+          } `
       }`}
     >
       <div className="max-w-400 mx-auto px-6">
@@ -138,7 +140,10 @@ export default function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden overflow-hidden bg-[#111]"
+            className={`lg:hidden overflow-hidden ${
+              scrolled ? "bg-transparent"
+              : "bg-transparent backdrop-blur-xl"
+            }`}
           >
             <div className="px-6 py-8 flex flex-col gap-6">
               {[
