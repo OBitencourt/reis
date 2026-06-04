@@ -20,7 +20,8 @@ const services: Service[] = [
   { id: "interlock", name: "Interlock" },
   { id: "railings", name: "Railings" },
   { id: "roof", name: "Roof" },
-  { id: "gates", name: "Gates" },
+  { id: "woodwork", name: "Wood Work" },
+  { id: "general", name: "General" },
 ];
 
 const portfolioItems: PortfolioItem[] = [
@@ -61,10 +62,10 @@ const portfolioItems: PortfolioItem[] = [
   { id: "26", serviceId: "roof", image: "/wood-sidings-gate.jpg" },
   { id: "27", serviceId: "roof", image: "/woof-roof-and-walls-3.jpeg" },
 
-  // Gates
+  // Woodwork
   { id: "28", serviceId: "gates", image: "/gate-1.jpg" },
 
-  // Sauna (no tab, just portfolio)
+  // General
   { id: "29", serviceId: "sauna", image: "/sauna-1.jpg" },
 ];
 
@@ -106,7 +107,7 @@ export default function Portfolio() {
               Portfólio
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-              Nossos Projetos
+              Our Projects
             </h2>
           </div>
         </motion.div>

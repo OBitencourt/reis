@@ -5,11 +5,14 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import { useRouter, usePathname } from 'next/navigation'
 
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const router = useRouter()
+  const pathname = usePathname()
 
   useEffect(() => {
     const onScroll = () => {
@@ -20,6 +23,17 @@ export default function Header() {
 
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  const handleNavClick = (href: string) => {
+    // Se estamos em /portfolio, navega para home com a section
+    if (pathname === '/portfolio') {
+      router.push(`/${href}`)
+    } else {
+      // Se já estamos em home, apenas faz scroll para a section
+      window.location.href = href
+    }
+    setMenuOpen(false)
+  }
 
   return (
     <motion.header
@@ -61,15 +75,15 @@ export default function Header() {
               ['About us', '#about'],
               ['Contact', '#contact'],
             ].map(([label, href]) => (
-              <a
+              <button
                 key={label}
-                href={href}
-                className={`group relative text-xs uppercase tracking-[0.18em] font-extralight text-zinc-300  hover:text-zinc-100 transition-all`}
+                onClick={() => handleNavClick(href)}
+                className={`group relative text-xs uppercase tracking-[0.18em] font-extralight text-zinc-300  hover:text-zinc-100 transition-all cursor-pointer bg-none border-none`}
               >
                 {label}
 
                 <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-zinc-200 transition-all duration-300 group-hover:w-full" />
-              </a>
+              </button>
             ))}
             
             {/* Portfólio Link com Next.js Link */}
@@ -85,16 +99,16 @@ export default function Header() {
 
           {/* CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            <a
-              href="#contact"
-              className="border text-white hover:bg-zinc-100/10 border-white/10 hover:border-zinc-400 transition-all duration-300 rounded-full px-5 py-3 text-xs uppercase tracking-[0.18em]"
+            <button
+              onClick={() => handleNavClick('#contact')}
+              className="border text-white hover:bg-zinc-100/10 border-white/10 hover:border-zinc-400 transition-all duration-300 rounded-full px-5 py-3 text-xs uppercase tracking-[0.18em] cursor-pointer"
             >
               Contact us
-            </a>
+            </button>
 
-            <a
-              href="#contact"
-              className="bg-zinc-200 squircle hover:bg-zinc-300 transition-all duration-300 rounded-2xl pl-5 pr-4 py-3 text-xs uppercase tracking-[0.18em] text-black flex items-center gap-2"
+            <button
+              onClick={() => handleNavClick('#contact')}
+              className="bg-zinc-200 squircle hover:bg-zinc-300 transition-all duration-300 rounded-2xl pl-5 pr-4 py-3 text-xs uppercase tracking-[0.18em] text-black flex items-center gap-2 cursor-pointer"
             >
               Make a quote
 
@@ -102,7 +116,7 @@ export default function Header() {
                 <ArrowRight size={14} className='text-white' />
 
               </div>
-            </a>
+            </button>
           </div>
 
           {/* MOBILE */}
@@ -151,13 +165,13 @@ export default function Header() {
                 ['Sobre', '#about'],
                 ['Contato', '#contact'],
               ].map(([label, href]) => (
-                <a
+                <button
                   key={label}
-                  href={href}
-                  className="uppercase tracking-[0.18em] text-sm text-zinc-300"
+                  onClick={() => handleNavClick(href)}
+                  className="uppercase tracking-[0.18em] text-sm text-zinc-300 cursor-pointer bg-none border-none text-left"
                 >
                   {label}
-                </a>
+                </button>
               ))}
               
               {/* Portfólio Link Mobile com Next.js Link */}

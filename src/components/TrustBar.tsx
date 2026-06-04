@@ -3,9 +3,9 @@ const TrustBar = () => {
     <section className="border-b border-zinc-200 w-full">
       <div className=" max-w-7xl mx-auto py-8 grid md:grid-cols-3 gap-8">
         {[
-          "Mais de 120 projetos entregues",
-          "Equipe especializada",
-          "Atendimento rápido e transparente",
+          "More than 120 projects delivered",
+          "Specialized team",
+          "Fast and transparent service",
         ].map((item) => (
           <div
             key={item}

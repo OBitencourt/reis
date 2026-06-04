@@ -46,14 +46,6 @@ const services: Service[] = [
     duration: "7-14 days",
   },
   {
-    id: "gates",
-    name: "Gates",
-    image: "/gate-1.jpg",
-    description:
-      "Professional installation of stylish and secure gates for all properties. Custom designs that combine security with aesthetics.",
-    duration: "3-8 days",
-  },
-  {
     id: "railings",
     name: "Railings",
     image: "/railings-3.jpg",

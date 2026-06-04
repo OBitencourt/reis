@@ -61,7 +61,7 @@ export default function About({ id }: AboutProps) {
             <p className="text-sm text-end font-light text-secondary mb-2 uppercase tracking-wide">
               About uts
             </p>
-            <h2 className="text-4xl text-end md:text-5xl font-bold text-foreground">
+            <h2 className="text-4xl text-end md:text-5xl font-bold text-zinc-800">
               Building Dreams, Renovating Lives.
             </h2>
           </div>
@@ -78,25 +78,25 @@ export default function About({ id }: AboutProps) {
             className="space-y-6 px-6 md:px-6 py-12 border-t md:border-b border-l border-r border-zinc-200 md:h-163"
           >
             <motion.div variants={itemVariants}>
-              <h3 className="text-2xl font-bold text-foreground mb-4">
+              <h3 className="text-2xl font-bold text-zinc-800 mb-4">
                 Who We Are
               </h3>
-              <p className="text-lg text-foreground/80 leading-relaxed">
+              <p className="text-lg text-zinc-800/80 leading-relaxed">
                 Rei's is a family-owned company with over 15 years of experience in construction and renovation. Born from the passion of a father and son for excellence, we transform projects into reality with quality, dedication, and attention to detail.
               </p>
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <h3 className="text-2xl font-bold text-foreground mb-4">
+              <h3 className="text-2xl font-bold text-zinc-800 mb-4">
                 Our Mission
               </h3>
-              <p className="text-lg text-foreground/80 leading-relaxed">
+              <p className="text-lg text-zinc-800/80 leading-relaxed">
                 To provide complete construction and renovation solutions that exceed our clients' expectations by combining technique, creativity, and personalized service in every project.
               </p>
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <h3 className="text-2xl font-bold text-foreground mb-4">
+              <h3 className="text-2xl font-bold text-zinc-800 mb-4">
                 Why Choose Us
               </h3>
               <ul className="space-y-3">
@@ -110,7 +110,7 @@ export default function About({ id }: AboutProps) {
                   <motion.li
                     key={index}
                     variants={itemVariants}
-                    className="flex items-center gap-3 text-lg text-foreground/80"
+                    className="flex items-center gap-3 text-lg text-zinc-800/80"
                   >
                     <BadgeCheck className="w-4 h-4" />
                     <span>{item}</span>

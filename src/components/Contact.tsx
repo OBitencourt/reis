@@ -183,10 +183,10 @@ export default function Contact({ id }: ContactProps) {
           <p className="text-sm font-light text-secondary mb-2 uppercase tracking-wide">
             Contact
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-zinc-800 mb-4">
             Get In Touch
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-zinc-700 max-w-2xl mx-auto">
             Ready to start your project? Contact us today and get a free quote.
           </p>
         </motion.div>
@@ -209,7 +209,7 @@ export default function Contact({ id }: ContactProps) {
               <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
                 <Phone className="w-6 h-6 text-accent" />
               </div>
-              <h4 className="font-semibold text-foreground mb-2">Phone</h4>
+              <h4 className="font-semibold text-zinc-800 mb-2">Phone</h4>
               <a
                 href="tel:(555)123-4567"
                 className="text-zinc-400 hover:text-zinc-900 transition-colors duration-300"
@@ -226,7 +226,7 @@ export default function Contact({ id }: ContactProps) {
               <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
                 <Mail className="w-6 h-6 text-accent" />
               </div>
-              <h4 className="font-semibold text-foreground mb-2">Email</h4>
+              <h4 className="font-semibold text-zinc-800 mb-2">Email</h4>
               <a
                 href="mailto:contact@reis.com"
                 className="text-zinc-400 hover:text-zinc-900 transition-colors duration-300"
