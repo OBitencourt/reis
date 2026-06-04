@@ -28,13 +28,11 @@ const portfolioItems: PortfolioItem[] = [
   // Decks
   { id: "1", serviceId: "decks", image: "/deck-2.jpg" },
   { id: "2", serviceId: "decks", image: "/deck-3.jpg" },
-  { id: "3", serviceId: "decks", image: "/deck-inicio.jpg" },
   { id: "4", serviceId: "decks", image: "/deck-interlock-railings.jpeg" },
   { id: "5", serviceId: "decks", image: "/deck-interlock-railings-2.jpeg" },
 
   // Fences
   { id: "6", serviceId: "fences", image: "/fence-1.jpeg" },
-  { id: "7", serviceId: "fences", image: "/fence-2.jpeg" },
   { id: "8", serviceId: "fences", image: "/fence-3.jpeg" },
   { id: "9", serviceId: "fences", image: "/fence-4.jpeg" },
 
@@ -44,8 +42,8 @@ const portfolioItems: PortfolioItem[] = [
   { id: "12", serviceId: "interlock", image: "/interlock-3.jpeg" },
   { id: "13", serviceId: "interlock", image: "/interlock-4-wood-sidings.jpg" },
   { id: "14", serviceId: "interlock", image: "/interlock-5.jpg" },
-  { id: "15", serviceId: "interlock", image: "/interlock-6.jpg" },
-  { id: "16", serviceId: "interlock", image: "/interlock-e-railings.jpg" },
+  { id: "15", serviceId: "interlock", image: "/interlock-6.jpeg" },
+  { id: "16", serviceId: "interlock", image: "/interlock-e-railings-2.jpeg" },
 
   // Railings
   { id: "17", serviceId: "railings", image: "/railings_e_deque-1.jpeg" },
@@ -56,17 +54,17 @@ const portfolioItems: PortfolioItem[] = [
   { id: "22", serviceId: "railings", image: "/railings-5.jpg" },
 
   // Roof
-  { id: "23", serviceId: "roof", image: "/roof-4.jpg" },
-  { id: "24", serviceId: "roof", image: "/wood-roof-1.jpeg" },
-  { id: "25", serviceId: "roof", image: "/wood-roof-2.jpeg" },
-  { id: "26", serviceId: "roof", image: "/wood-sidings-gate.jpg" },
-  { id: "27", serviceId: "roof", image: "/woof-roof-and-walls-3.jpeg" },
-
+  
   // Woodwork
-  { id: "28", serviceId: "gates", image: "/gate-1.jpg" },
-
+  { id: "23", serviceId: "woodwork", image: "/roof-4.jpg" },
+  { id: "24", serviceId: "woodwork", image: "/wood-roof-1.jpeg" },
+  { id: "25", serviceId: "woodwork", image: "/wood-roof-2.jpeg" },
+  { id: "26", serviceId: "woodwork", image: "/wood-sidings-gate.jpg" },
+  { id: "27", serviceId: "woodwork", image: "/woof-roof-and-walls-3.jpeg" },
+  
   // General
-  { id: "29", serviceId: "sauna", image: "/sauna-1.jpg" },
+  { id: "29", serviceId: "general", image: "/sauna-1.jpeg" },
+  { id: "28", serviceId: "general", image: "/gate-1.jpg" },
 ];
 
 export default function Portfolio() {
