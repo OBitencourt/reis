@@ -30,11 +30,13 @@ const portfolioItems: PortfolioItem[] = [
   { id: "2", serviceId: "decks", image: "/deck-3.jpg" },
   { id: "4", serviceId: "decks", image: "/deck-interlock-railings.jpeg" },
   { id: "5", serviceId: "decks", image: "/deck-interlock-railings-2.jpeg" },
+  { id: "41", serviceId: "decks", image: "/deck-4.webp" },
 
   // Fences
   { id: "6", serviceId: "fences", image: "/fence-1.jpeg" },
   { id: "8", serviceId: "fences", image: "/fence-3.jpeg" },
   { id: "9", serviceId: "fences", image: "/fence-4.jpeg" },
+  { id: "36", serviceId: "fences", image: "/woood-fence.webp" },
 
   // Interlock
   { id: "10", serviceId: "interlock", image: "/interlock-1.jpeg" },
@@ -52,8 +54,11 @@ const portfolioItems: PortfolioItem[] = [
   { id: "20", serviceId: "railings", image: "/railings-3.jpg" },
   { id: "21", serviceId: "railings", image: "/railings-4-wood-sidings.jpg" },
   { id: "22", serviceId: "railings", image: "/railings-5.jpg" },
+  { id: "40", serviceId: "railings", image: "/railings-6.webp" },
 
   // Roof
+  { id: "37", serviceId: "roof", image: "/roof-1.jpg" },
+  { id: "38", serviceId: "roof", image: "/roof-2.jpg" },
   
   // Woodwork
   { id: "23", serviceId: "woodwork", image: "/roof-4.jpg" },
@@ -61,10 +66,17 @@ const portfolioItems: PortfolioItem[] = [
   { id: "25", serviceId: "woodwork", image: "/wood-roof-2.jpeg" },
   { id: "26", serviceId: "woodwork", image: "/wood-sidings-gate.jpg" },
   { id: "27", serviceId: "woodwork", image: "/woof-roof-and-walls-3.jpeg" },
+  { id: "33", serviceId: "woodwork", image: "/wood-bench.webp" },
+  { id: "34", serviceId: "woodwork", image: "/wood-door.jpeg" },
+  { id: "39", serviceId: "woodwork", image: "/wood-stair.jpeg" },
   
   // General
-  { id: "29", serviceId: "general", image: "/sauna-1.jpeg" },
-  { id: "28", serviceId: "general", image: "/gate-1.jpg" },
+  { id: "28", serviceId: "general", image: "/sauna-1.jpeg" },
+  { id: "29", serviceId: "general", image: "/gate-1.jpg" },
+  { id: "30", serviceId: "general", image: "/general-work-2.webp" },
+  { id: "31", serviceId: "general", image: "/general-work-3.webp" },
+  { id: "32", serviceId: "general", image: "/general-work.webp" },
+  
 ];
 
 export default function Portfolio() {
