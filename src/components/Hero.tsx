@@ -49,7 +49,7 @@ const HeroSection = () => {
             Building modern spaces with{" "}
             <span className="text-secondary brightness-105">
               excellence <span className="text-zinc-100">and</span>{" "}
-              <span className="text-secondary">precision.</span>
+              <span className="text-secondary">much precision.</span>
             </span>
           </h1>
 
