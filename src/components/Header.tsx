@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, ChevronRight } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { useRouter, usePathname } from 'next/navigation'
@@ -40,7 +40,7 @@ export default function Header() {
       initial={{ opacity: 0, y: -80 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className={`top-0 left-0 z-50 fixed  transition-all duration-500 ${
+      className={`top-0 left-0 z-50 font-sans transition-all duration-500 ${
         scrolled
           ? 'bg-[#0c0a07]/60 backdrop-blur-xl  w-[90%] left-[5%] top-5 rounded-3xl'
           : `bg-[#0c0a07]/60  w-full ${
@@ -48,7 +48,7 @@ export default function Header() {
           } `
       }`}
     >
-      <div className="max-w-400 mx-auto px-6">
+      <div className="max-w-480 mx-auto px-6">
         <div
           className={`flex items-center justify-between transition-all duration-500 ${
             scrolled ? 'h-20' : 'h-24'
@@ -60,7 +60,7 @@ export default function Header() {
               <Image 
                 width={300}
                 height={300}
-                src={scrolled ? "/Logo-Branca-Reis.png" : "/Logo-Branca-Detalhes-Verdes-E-Vermelho-Reis.png"}
+                src={scrolled ? "/Logo-Preta-Detalhes-Verdes-E-Vermelhos-Reis.png" : "/Logo-Preta-Detalhes-Verdes-E-Vermelhos-Reis.png"}
                 alt='logo-black'
                 className='h-auto w-40'
               />
@@ -71,6 +71,7 @@ export default function Header() {
           {/* NAV */}
           <nav className="hidden lg:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
             {[
+              ['Home', '#home'],
               ['Services', '#services'],
               ['About us', '#about'],
               ['Contact', '#contact'],
@@ -78,42 +79,37 @@ export default function Header() {
               <button
                 key={label}
                 onClick={() => handleNavClick(href)}
-                className={`group relative text-xs uppercase tracking-[0.18em] font-extralight text-zinc-300  hover:text-zinc-100 transition-all cursor-pointer bg-none border-none`}
+                className={`group relative text-md font-sans font-normal text-[#4E4E4E] px-2 py-1.5 rounded-md hover:bg-[#E9E9E9]/80 transition-all cursor-pointer bg-none border-none`}
               >
                 {label}
-
-                <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-zinc-200 transition-all duration-300 group-hover:w-full" />
               </button>
             ))}
             
             {/* Portfólio Link com Next.js Link */}
             <Link
               href="/portfolio"
-              className={`group relative text-xs uppercase tracking-[0.18em] font-extralight text-zinc-300  hover:text-zinc-100 transition-all`}
+              className={`group relative text-md flex items-center  font-normal text-[#4E4E4E] px-2 py-1.5 rounded-md  hover:bg-[#E9E9E9]/80 transition-all`}
             >
               Portfólio
 
-              <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-zinc-200 transition-all duration-300 group-hover:w-full" />
+              <ArrowUpRight size={20} className="ml-1 inline-block transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           </nav>
 
           {/* CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            <button
-              onClick={() => handleNavClick('#contact')}
-              className="border text-white hover:bg-zinc-100/10 border-white/10 hover:border-zinc-400 transition-all duration-300 rounded-full px-5 py-3 text-xs uppercase tracking-[0.18em] cursor-pointer"
-            >
-              Contact us
-            </button>
 
             <button
               onClick={() => handleNavClick('#contact')}
-              className="bg-zinc-200 squircle hover:bg-zinc-300 transition-all duration-300 rounded-2xl pl-5 pr-4 py-3 text-xs uppercase tracking-[0.18em] text-black flex items-center gap-2 cursor-pointer"
+              className="bg-[#03020B] squircle transition-all duration-300 rounded-2xl pl-5 pr-1 pt-1 pb-1 text-sm uppercase tracking-[0.18em]  text-white flex items-center gap-2 cursor-pointer shadow-[inset_0px_0px_12px_5px_#525252,inset_0_-2px_4px_#00000099] hover:shadow-[inset_0px_0px_12px_8px_#525252,inset_0_-2px_4px_#00000099]"
             >
-              Make a quote
+              <span className='bg-linear-to-r from-white via-white to-zinc-[#999999] bg-clip-text'>
 
-              <div className='p-1.5 rounded-xl bg-zinc-800'> 
-                <ArrowRight size={14} className='text-white' />
+                MAKE A FREE QUOTE
+              </span>
+
+              <div className='p-1.5 rounded-xl bg-[#F1F1F1]'> 
+                <ChevronRight size={30} className='text-black ' />
 
               </div>
             </button>
