@@ -161,9 +161,9 @@ export default function Header() {
           >
             <div className="px-6 py-8 flex flex-col gap-6">
               {[
-                ['Serviços', '#services'],
-                ['Sobre', '#about'],
-                ['Contato', '#contact'],
+                ['Services', '#services'],
+                ['About Us', '#about'],
+                ['Contact', '#contact'],
               ].map(([label, href]) => (
                 <button
                   key={label}

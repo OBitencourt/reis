@@ -36,7 +36,7 @@ const portfolioItems: PortfolioItem[] = [
   { id: "6", serviceId: "fences", image: "/fence-1.jpeg" },
   { id: "8", serviceId: "fences", image: "/fence-3.jpeg" },
   { id: "9", serviceId: "fences", image: "/fence-4.jpeg" },
-  { id: "36", serviceId: "fences", image: "/woood-fence.webp" },
+  { id: "36", serviceId: "fences", image: "/wood-fence.webp" },
 
   // Interlock
   { id: "10", serviceId: "interlock", image: "/interlock-1.jpeg" },
@@ -57,8 +57,8 @@ const portfolioItems: PortfolioItem[] = [
   { id: "40", serviceId: "railings", image: "/railings-6.webp" },
 
   // Roof
-  { id: "37", serviceId: "roof", image: "/roof-1.jpg" },
-  { id: "38", serviceId: "roof", image: "/roof-2.jpg" },
+  { id: "37", serviceId: "roof", image: "/roof-1.webp" },
+  { id: "38", serviceId: "roof", image: "/roof-2.webp" },
   
   // Woodwork
   { id: "23", serviceId: "woodwork", image: "/roof-4.jpg" },
